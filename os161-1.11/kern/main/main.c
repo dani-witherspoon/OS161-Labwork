@@ -33,6 +33,8 @@ extern const char buildconfig[];
  * Copyright message for the OS/161 base code.
  */
 static const char harvard_copyright[] =
+    "Dani has altered this banner. Pray she does not alter it further."
+
     "Copyright (c) 2000, 2001, 2002, 2003\n"
     "   President and Fellows of Harvard College.  All rights reserved.\n";
 
