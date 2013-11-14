@@ -16,6 +16,7 @@
 #include <vm.h>
 #include <syscall.h>
 #include <version.h>
+#include "opt-A0.h"
 
 /*
  * These two pieces of data are maintained by the makefiles and build system.
@@ -63,12 +64,16 @@ boot(void)
 	 * dev/generic/console.c).
 	 */
 
+	#if OPT_A0
+		hello();
+	#endif /* OPT_A0 */
+
 	kprintf("\n");
 	kprintf("OS/161 base system version %s\n", BASE_VERSION);
 	kprintf("%s", harvard_copyright);
 	kprintf("\n");
 
-	kprintf("Put-your-group-name-here's system version %s (%s #%d)\n", 
+	kprintf("Dani's system version %s (%s #%d)\n", 
 		GROUP_VERSION, buildconfig, buildversion);
 	kprintf("\n");
 
